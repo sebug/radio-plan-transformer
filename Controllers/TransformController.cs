@@ -14,7 +14,9 @@ namespace radio_plan_transformer.Controllers
     [ApiController]
     public class TransformController : ControllerBase
     {
-        public bool Post([FromForm] TransformRequest request)
+        public const string XLSX_MIME_TYPE = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+
+        public FileContentResult Post([FromForm] TransformRequest request)
         {
             using (var ms = new MemoryStream())
             {
@@ -23,8 +25,14 @@ namespace radio_plan_transformer.Controllers
                 {
 
                 }
+                return File(ms.ToArray(), XLSX_MIME_TYPE, GetFileName(request));
             }
-            return true;
+        }
+
+        private string GetFileName(TransformRequest transformRequest)
+        {
+            return $"{transformRequest.CourseNumber}_" +
+                $"{transformRequest.CourseType.Replace(" ", "_").ToLowerInvariant()}.xlsx";
         }
     }
 }
