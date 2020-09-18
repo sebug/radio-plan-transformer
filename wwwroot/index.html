@@ -11,7 +11,8 @@
   </head>
   <body>
     <h1>Transform Radio Plan</h1>
-    <form method="post" action="/api/Transform">
+    <form method="post" action="/api/Transform" enctype="multipart/form-data">
+      <p>Template: <input type="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" name="Template" /></p>
       <button type="submit">Transform</button>
     </form>
   </body>

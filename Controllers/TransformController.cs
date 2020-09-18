@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using radio_plan_transformer.Models;
 
 namespace radio_plan_transformer.Controllers
 {
@@ -11,8 +12,9 @@ namespace radio_plan_transformer.Controllers
     [ApiController]
     public class TransformController : ControllerBase
     {
-        public bool Post()
+        public async Task<bool> Post([FromForm] TransformRequest request)
         {
+            await Task.Yield();
             return true;
         }
     }
