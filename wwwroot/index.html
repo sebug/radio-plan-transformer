@@ -12,7 +12,12 @@
   <body>
     <h1>Transform Radio Plan</h1>
     <form method="post" action="/api/Transform" enctype="multipart/form-data">
-      <p>Template: <input type="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" name="Template" /></p>
+      <p><label>Genre de cours: <input name="CourseType" /></label></p>
+      <p><label>Numéro de cours: <input name="CourseNumber" /></label></p>
+      <p><label>Date: <input name="CourseDates" /></label></p>
+      <p><label>Établi par: <input autocomplete="name" name="CreatedBy" /></label></p>
+      <p><label>Téléphone: <input autocomplete="tel" type="tel" name="Phone" /></label></p>
+      <p><label>Template: <input type="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" name="Template" /></label></p>
       <button type="submit">Transform</button>
     </form>
   </body>
