@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using DocumentFormat.OpenXml.Packaging;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using radio_plan_transformer.Models;
@@ -12,9 +14,16 @@ namespace radio_plan_transformer.Controllers
     [ApiController]
     public class TransformController : ControllerBase
     {
-        public async Task<bool> Post([FromForm] TransformRequest request)
+        public bool Post([FromForm] TransformRequest request)
         {
-            await Task.Yield();
+            using (var ms = new MemoryStream())
+            {
+                request.Template.CopyTo(ms);
+                using (var doc = SpreadsheetDocument.Open(ms, true))
+                {
+
+                }
+            }
             return true;
         }
     }
