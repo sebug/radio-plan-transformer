@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "radio-plan-transformer", "radio-plan-transformer.csproj", "{70AFAE7B-F621-43A9-89B0-19A3FDE78038}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70AFAE7B-F621-43A9-89B0-19A3FDE78038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70AFAE7B-F621-43A9-89B0-19A3FDE78038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70AFAE7B-F621-43A9-89B0-19A3FDE78038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70AFAE7B-F621-43A9-89B0-19A3FDE78038}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
